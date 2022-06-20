@@ -62103,7 +62103,7 @@ $S:387}
 A.a5z.prototype={
 $0(){var s=0,r=A.Z(t.H)
 var $async$$0=A.a_(function(a,b){if(a===1)return A.W(b,r)
-while(true)switch(s){case 0:B.ko.a3T(window,"https://runefactory5.com/assets/\u538b\u7f29\u5305.zip","_blank")
+while(true)switch(s){case 0:B.ko.a3T(window,"https://runefactory5.com/assets/assets/ysb.zip","_blank")
 return A.X(null,r)}})
 return A.Y($async$$0,r)},
 $S:19}
