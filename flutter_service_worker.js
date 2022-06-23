@@ -9,11 +9,10 @@ const RESOURCES = {
 "canvaskit/canvaskit.wasm": "e58017ff67dd1419dbd7b720458fb1af",
 "canvaskit/canvaskit.js": "9d49083c3442cfc15366562eb578b5f3",
 "version.json": "f6fb2e367a1e3f305762c17c29027dc7",
-"index.html": "48c02b36809031b00382b8daf1af8701",
-"/": "48c02b36809031b00382b8daf1af8701",
-"assets/AssetManifest.json": "076ef9fd3be2a84514567fc85dbbdea6",
+"index.html": "f33df47f296bde92fad9f8e3e3d9ce9e",
+"/": "f33df47f296bde92fad9f8e3e3d9ce9e",
+"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/assets/%25E5%258E%258B%25E7%25BC%25A9%25E5%258C%2585.zip": "5fabef701d27cd92c68531b483dbedf5",
-"assets/assets/ysb.zip": "5fabef701d27cd92c68531b483dbedf5",
 "assets/NOTICES": "5a7d0971065fa0061f96a4aec627d1f6",
 "assets/shaders/ink_sparkle.frag": "6b2a86a6871a890f7ba59e66cd864816",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
@@ -25,7 +24,7 @@ const RESOURCES = {
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"main.dart.js": "4951a5d47a62cebb803f0226d8f23a4a"
+"main.dart.js": "019405203f4872252b0b35199522edbb"
 };
 
 // The application shell files that are downloaded before a service worker can
