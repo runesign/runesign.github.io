@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>帖子内容</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+</head>
+
+<body>
+    <div class="">
+        <!-- 一个文章div，有标题，有作者，有时间日期 -->
+        <div class="flex p-4 bg-blue-200 rounded-lg m-2">
+            <div class="w-1/5">
+                <div><p>问下学长学姐们，新大一要不要上早晚自习😂</p></div>
+            </div>
+            <div class="w-20 m-4">
+                <div class="text-gray-600 text-right">珊瑚宫心海</div>
+                <div class="text-gray-600 text-right">22-12-6</div>
+            </div>
+            <div class="flex w-1/2 mb-2 m-4">
+                <img src="img/event/1.jpg" alt="GUET-Beihai" class="w-1/5 m-4 rounded-lg">
+                <p>我是刚来的新生，不知道这个学校要不要上早晚自习呢？如果要的话，具体时间是多少呢？</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div id="result">
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div>
+                    <button id="comment" class="p-4 bg-blue-500 text-white rounded-lg m-2 shadow-md hover:shadow-lg">评论</button>
+                    <script>
+                        const button = document.getElementById('comment');
+                        button.addEventListener('click', () => {
+                            const popup = document.createElement('div');
+                            popup.innerHTML = `
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="bg-teal-200 rounded-lg p-4">
+                <div class="mb-2"><p>您的名字：<input class="rounded-full w-1/4 shadow-md hover:shadow-lg" type="text" id="content1"></p></div>
+                <div class="mb-2"><p>您的内容：<input wrap="wrap" class="rounded-4 h-12 shadow-md hover:shadow-lg" type="text" id="content2"></p></div>
+                <button id="submit" class="p-1 bg-blue-500 text-white rounded-lg m-2 shadow-md hover:shadow-lg">提交</button>
+                <button id="cancel" class="p-1 bg-blue-500 text-white rounded-lg m-2 shadow-md hover:shadow-lg">取消</button>
+            </div>
+        </div>
+  `;
+                            document.body.appendChild(popup);
+                            const cancelButton = document.getElementById('cancel');
+                            cancelButton.addEventListener('click', () => {
+                                document.body.removeChild(popup);
+                            });
+
+                            const submitButton = document.getElementById('submit');
+                            submitButton.addEventListener('click', () => {
+                                // 获取填写的内容1和内容2
+                                const content1 = document.getElementById('content1').value;
+                                const content2 = document.getElementById('content2').value;
+                                // 获取当前的日期和时间
+                                const now = new Date();
+                                const date = now.toLocaleDateString();
+                                const time = now.toLocaleTimeString();
+                                // 生成随机颜色
+                                const random = Math.random();
+                                let color = '';
+                                if (random < 0.125) { color = 'bg-red-200'; } else if (random < 0.25) { color = 'bg-blue-200'; } else if (random < 0.375) { color = 'bg-green-200'; } else if (random < 0.5) { color = 'bg-orange-200'; } else if (random < 0.625) { color = 'bg-pink-200'; } else if (random < 0.75) { color = 'bg-purple-200'; } else if (random < 0.875) { color = 'bg-teal-200'; } else { color = 'bg-indigo-200'; }
+                                // 创建新的div元素
+                                const newDiv = document.createElement('div');
+                                // 将内容1、内容2、日期和时间添加到新的div中
+                                newDiv.innerHTML = `
+            <div class="flex p-4 ${color} rounded-full m-6">
+                <div class="w-1/5 ">
+                    <div >${content1}</div>
+                    <div class="text-gray-600 text-right">${date} ${time}</div>
+                </div>
+                <div class="w-1/2 mb-2 m-4">
+                    ${content2}
+                </div>
+            </div>
+`;
+                                // 获取位于id为result的div元素
+                                const resultDiv = document.getElementById('result');
+                                // 将新的div添加到位于id为result的div下
+                                resultDiv.appendChild(newDiv);
+                                // 关闭弹出窗口
+                                document.body.removeChild(popup);
+                            });
+
+                        });
+                    </script>
+                </div>
+                <div>
+                    <button class="p-4 bg-blue-500 text-white rounded-lg m-2 shadow-md hover:shadow-lg"
+                        onclick="copyLink()">复制转发</button>
+                    <script>
+                        function copyLink() {
+                            // 获取当前页面的链接
+                            var link = window.location.href;
+
+                            // 创建一个临时元素
+                            var tempElement = document.createElement('textarea');
+
+                            // 将链接复制到临时元素中
+                            tempElement.value = link;
+
+                            // 将临时元素添加到页面中
+                            document.body.appendChild(tempElement);
+
+                            // 选中临时元素中的文本
+                            tempElement.select();
+
+                            // 复制选中的文本
+                            document.execCommand('copy');
+
+                            // 删除临时元素
+                            document.body.removeChild(tempElement);
+                        }
+                    </script>
+                </div>
+                <div>
+                        <button id="like" class="rounded-full bg-red-400 text-white px-6 py-4 shadow-md hover:shadow-lg"
+                            onclick="incrementNumber()">
+                            0
+                        </button>
+                    <script>
+                        let count = 0;
+
+                        function incrementNumber() {
+                            count++;
+                            document.querySelector('#like').innerHTML = count;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
