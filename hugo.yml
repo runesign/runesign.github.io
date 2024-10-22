@@ -1,5 +1,5 @@
 baseURL: "https://examplesite.com/"
-title: ExampleSite
+title: 浮事汇
 
 pagination:
   pagerSize: 5
@@ -17,10 +17,10 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: Gendon's Garden
+  description: "Gendon的小花园"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Gendon
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -53,7 +53,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
+    text: "☔浮事汇"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -72,10 +72,30 @@ params:
       - name: Tags
         url: tags
 
+  socialIcons:
+    - name: github
+      url: "https://github.com/runesign"
+    - name: twitter
+      url: "https://x.com/runesign?t=4J0J7tFWDCosZJnaDJUa3w&s=09"
+    # - name: facebook
+    #   url: "https://www.facebook.com/profile.php?id=100027782410997"
+    # - name: instagram
+    #   url: "img/instagram.png"
+    - name: QQ
+      url: "https://qm.qq.com/q/1XKcAJV6bm"
+    - name: WeChat
+      url: "img/wechat.png"
+    - name: bilibili
+      url: "https://space.bilibili.com/365194660"
+    - name: email
+      url: "mailto:runesign@outlook.com"
+  # - name: RSS
+  #   url: "index.xml"
+
   # home-info mode
   homeInfoParams:
-    Title: "Hi there 👋"
-    Content: Welcome to my blog
+    Title: "嘿嘿，你好，你好，嘿嘿"
+    Content: Welcome to Gendon's Garden
 
   social:
     - name: x
@@ -117,18 +137,30 @@ params:
 
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
+    # - identifier: search
+    #   name: 🔍 搜索
+    #   url: search
+    #   weight: 1
+    - identifier: home
+      name: 🏠 主页
+      url: /
+      weight: 2
+    - identifier: posts
+      name: 📚 文章
+      url: post
+      weight: 3
     - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+      name: 🧩 标签
+      url: tags
+      weight: 15
+    - identifier: about
+      name: 🙋 关于
+      url: about
+      weight: 50
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -136,7 +168,7 @@ markup:
   highlight:
     noClasses: false
     # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: darcula
