@@ -259,32 +259,4 @@ git push
 ```
 
 好了，现在过一会你就能访问你的xxxxxxxx.github.io了
-word天终于写完了顶部代码是什么意思没关系，我们是猪猪🐷，猪猪🐷不用思考那么多，在这个文件的底部空白处新开几行，随便乱敲点什么吧。
-
-注意先确认保存修改，现在可以直接输入
-
-```bash
-hugo server -D
-# hugo的server命令运行一个网络程序提供给我们访问。-D参数的意思是在根据default.md中的draft(草稿)参数生成的md文件顶部也会有draft，根据这个参数与否标记文章的是否草稿属性
-```
-
-来运行项目了。放心点击命令块右上角的复制，不用删除里面的描述文字，直接粘贴运行就可以了，打开浏览器，自己输入或点击 0.0.0.0:1313 进入hugo服务器运行的博客网站。
-到目前为止，如果有任何报错，请复制询问AI。
-
-是不是不够好看，太简单了？我们现在来安装主题。
-我们还是先把项目接入git吧。
-
-```bash
-
-```
-
-https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
-这是我选择的主题，主题换起来很容易，不用担心，我们先用起来，不要有顽霉主义，先用起来。
-
-教程给出四个方法，我们选择标有 **(recomended)** 的方法，不在这种小事上给自己没事找事。不然等等报错你就知错了。
-
-```bash
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-git submodule update --init --recursive # 当你要重新克隆你的项目时请记得输入这条命令更新子插件（这里也就是主题模组）
-# 看不懂没关系，点击右上角复制粘贴全部带着这句话一起输入就可以了，我们是猪猪🐷，猪猪🐷不用思考那么多
-```
+word天终于写完了
